@@ -28,8 +28,9 @@ vteam/
 ## Run
 ```bash
 docker compose up --build
-```bash
+```
 
+## Routes 
 Admin: http://localhost:3001
 
 User: http://localhost:3002
