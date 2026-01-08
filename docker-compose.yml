@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  backend:
+    build: ./backend-vteam
+    container_name: vteam-backend
+    ports:
+      - "3000:3000"
+    env_file:
+      - ./backend-vteam/.env
+    depends_on:
+      - mongo
+
+  admin:
+    build: ./vteam-admin-client
+    container_name: vteam-admin
+    ports:
+      - "3001:80"
+    depends_on:
+      - backend
+
+  user:
+    build: ./user-client
+    container_name: vteam-user
+    ports:
+      - "3002:80"
+    depends_on:
+      - backend
+
+  mongo:
+    image: mongo:latest
+    container_name: vteam-mongo
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
