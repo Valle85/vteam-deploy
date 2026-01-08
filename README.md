@@ -28,6 +28,7 @@ vteam/
 ## Run
 ```bash
 docker compose up --build
+```bash
 
 Admin: http://localhost:3001
 
