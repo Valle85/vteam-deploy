@@ -55,6 +55,7 @@ MONGO_DSN_TEST=mongodb://localhost:27017/test
 GITHUB_CALLBACK_URL=http://localhost:3000/api/auth/github/callback
 GITHUB_CLIENT_ID=your_github_client_id
 GITHUB_CLIENT_SECRET=your_github_client_secret
+```
 
 ### GitHub OAuth (optional)
 To enable GitHub login, create an OAuth App on GitHub:
