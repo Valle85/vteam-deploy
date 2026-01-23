@@ -20,7 +20,7 @@ services:
       - backend
 
   user:
-    build: ../user-client
+    build: ../vteam-user-client
     container_name: vteam-user
     ports:
       - "3002:80"
